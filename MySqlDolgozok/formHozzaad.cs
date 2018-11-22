@@ -19,17 +19,24 @@ namespace MySqlDolgozok
 
         private void btnHozzáad_Click(object sender, EventArgs e)
         {
-            if (Dolgozo.Szempont != null)
+
+
+            if (tbNev != null)
             {
                 MessageBox.Show("Mindent kitöltöttél hozzáadva az adatbázishoz.");
-                
+
+            }
+            else if (tbKereset != null)
+            {
+                MessageBox.Show("Mindent kitöltöttél hozzáadva az adatbázishoz.");
+
             }
             else {
-
                 MessageBox.Show("Valami hiányzik.");
+
             }
-            
-            
+           
+
         }
 
         private void tbNev_TextChanged(object sender, EventArgs e)
@@ -50,6 +57,9 @@ namespace MySqlDolgozok
             }
         }
 
-        
+        private void formHozzaad_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

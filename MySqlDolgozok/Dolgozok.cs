@@ -75,5 +75,11 @@ namespace MySqlDolgozok
             lista.Sort(); // A lista újrarendezése
 
         }
+        public void ModositDolgozo(Dolgozo md) {
+            Adatbazis.ModositDolgozo(md);
+            lista = Adatbazis.BeolvasDolgozo();
+            lista.Sort();
+            
+        }
     }
 }

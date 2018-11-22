@@ -130,6 +130,34 @@ namespace MySqlDolgozok
                 KapcsolatBezaras();
             }
         }
-        
+        public static void ModositDolgozo(Dolgozo md)
+        {
+            MySqlCommand parancs;
+            try
+            {
+                Kapcsolodas();
+                string parancsStr = "UPDATE dolgozok SET (id,nev,nem,kor,kereset) " +
+                    "VALUES(@id,@nev,@nem,@kor,@kereset)";
+
+                parancs = new MySqlCommand(parancsStr, kapcsolat);
+                parancs.Parameters.AddWithValue("@id", md.Id);
+                parancs.Parameters.AddWithValue("@nev", md.Nev);
+                parancs.Parameters.AddWithValue("@nem", md.Nem ? "férfi" : "nő");
+                parancs.Parameters.AddWithValue("@kor", md.Eletkor);
+                parancs.Parameters.AddWithValue("@kereset", md.Fizetes);
+
+                parancs.ExecuteNonQuery();
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                KapcsolatBezaras();
+            }
+        }
+
     }
 }

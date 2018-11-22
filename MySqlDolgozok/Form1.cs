@@ -93,6 +93,9 @@ namespace MySqlDolgozok
             kiir();
         }
 
-        
+        private void btnModosit_Click(object sender, EventArgs e)
+        {
+            dolg.ModositDolgozo()
+        }
     }
 }

@@ -44,6 +44,7 @@
             this.btnKilep = new System.Windows.Forms.Button();
             this.nudTorolSorszam = new System.Windows.Forms.NumericUpDown();
             this.btnTorol = new System.Windows.Forms.Button();
+            this.btnModosit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDolgozok)).BeginInit();
@@ -61,7 +62,6 @@
             this.tbDolgozok.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbDolgozok.Size = new System.Drawing.Size(482, 274);
             this.tbDolgozok.TabIndex = 0;
-            
             // 
             // groupBox1
             // 
@@ -250,11 +250,22 @@
             this.btnTorol.UseVisualStyleBackColor = true;
             this.btnTorol.Click += new System.EventHandler(this.btnTorol_Click);
             // 
+            // btnModosit
+            // 
+            this.btnModosit.Location = new System.Drawing.Point(295, 453);
+            this.btnModosit.Name = "btnModosit";
+            this.btnModosit.Size = new System.Drawing.Size(75, 23);
+            this.btnModosit.TabIndex = 7;
+            this.btnModosit.Text = "Módosít";
+            this.btnModosit.UseVisualStyleBackColor = true;
+            this.btnModosit.Click += new System.EventHandler(this.btnModosit_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(507, 501);
+            this.Controls.Add(this.btnModosit);
             this.Controls.Add(this.btnTorol);
             this.Controls.Add(this.nudTorolSorszam);
             this.Controls.Add(this.btnKilep);
@@ -295,6 +306,7 @@
         private System.Windows.Forms.Button btnKilep;
         private System.Windows.Forms.NumericUpDown nudTorolSorszam;
         private System.Windows.Forms.Button btnTorol;
+        private System.Windows.Forms.Button btnModosit;
     }
 }
 
